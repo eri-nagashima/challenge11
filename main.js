@@ -24,7 +24,6 @@ function modalOpen() {
 // モーダルを閉じる関数
 function modalClose() {
   modalElem.style.display = 'none';
-  modalCloseBtn.style.cursor = 'pointer';
 }
 
 // モーダル以外がクリックされた時に閉じる関数
