@@ -18,8 +18,6 @@ modalCloseBtn.addEventListener('click', modalClose);
 modal.addEventListener('click', function (e) {
   if (e.target == modal) {
     modalCloseOutside();
-  } else {
-    return '';
   }
 });
 
