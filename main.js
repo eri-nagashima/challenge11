@@ -1,5 +1,6 @@
 // モーダル要素の取得
-const modalElem = document.getElementById('easyModal');
+// const modalElem = document.getElementById('easyModal');
+const modal = document.querySelector('.modal');
 
 // 開くボタン取得
 const modalOpenBtn = document.getElementById('modalOpen');
@@ -14,19 +15,25 @@ modalOpenBtn.addEventListener('click', modalOpen);
 modalCloseBtn.addEventListener('click', modalClose);
 
 // モーダル以外の場所クリックのイベントリスナー
-const modal = document.querySelector('.modal');
+modal.addEventListener('click', function (e) {
+  if (e.target == modal) {
+    modalCloseOutside();
+  } else {
+    return '';
+  }
+});
 
 // モーダルオープンの関数
 function modalOpen() {
-  modalElem.style.display = 'block';
+  modal.style.display = 'block';
 }
 
 // モーダルを閉じる関数
 function modalClose() {
-  modalElem.style.display = 'none';
+  modal.style.display = 'none';
 }
 
 // モーダル以外がクリックされた時に閉じる関数
 function modalCloseOutside() {
-  modalElem.style.display = 'none';
+  modal.style.display = 'none';
 }
